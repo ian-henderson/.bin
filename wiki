@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+# Loops over the flags & arguments
+for i in "$@"; do
+  case $i in
+    -t|--terminal)
+      TERMINAL=true
+      shift
+      ;;
+    *)
+      URL="https://en.wikipedia.org/wiki/$i"
+      shift
+      ;;
+  esac
+done
+
+# Opens Wikipedia page
+if [[ $TERMINAL ]]; then
+  # in terminal
+  lynx --dump $URL | less
+else
+  # default: in browser
+  open $URL
+fi
