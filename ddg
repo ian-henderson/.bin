@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+URL="https://duckduckgo.com"
+
+if [[ $1 ]]; then
+  URL="https://duckduckgo.com/?q=$1"
+fi
+
+open $URL
