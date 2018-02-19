@@ -1,9 +1,11 @@
 #!/bin/zsh
 
-URL="wttr.in"
+DEFAULT_LOCATION="Addison, Texas"
 
 if [[ $1 ]]; then
   URL="wttr.in/~$1"
+else
+  URL="wttr.in/~$DEFAULT_LOCATION"
 fi
 
 curl $URL
