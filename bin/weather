@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-DEFAULT_LOCATION="Addison, Texas"
+DEFAULT_LOCATION="Colorado+Springs"
 
 if [[ $1 ]]; then
   URL="wttr.in/~$1"
