@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-URL="https://duckduckgo.com"
+DDG_URL="https://duckduckgo.com"
 
 if [[ $1 ]]; then
-  URL="https://duckduckgo.com/?q=$1"
+  DDG_URL="$DDG_URL/?q=$1"
 fi
 
-open $URL
+open $DDG_URL
